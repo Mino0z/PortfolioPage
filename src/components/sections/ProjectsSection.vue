@@ -68,6 +68,14 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 
+// Na początku pliku dodaj importy obrazów
+import baggcomImage from '@/assets/baggcom nobackground.png';
+import budtaxiImage from '@/assets/budtaxi nobackground.png';
+import facebookImage from '@/assets/Facebook to instagram, pinterest.png';
+import puppeteerImage from '@/assets/puppeteer.png';
+import comaraImage from '@/assets/comara.io.png';
+import eqexImage from '@/assets/eqex.png';
+
 // Filtry projektów
 const filters = [
   { label: 'All Projects', value: 'all' },
@@ -86,7 +94,7 @@ const projects = ref([
     id: 1,
     title: 'Construction Company Website',
     description: 'Complete web & brand design, featuring Astra WordPress theme, full conection with google staff, and optimized performance.',
-    image: '/src/assets/baggcom nobackground.png',
+    image: baggcomImage, // Użyj zmiennej zamiast ścieżki
     liveUrl: 'https://baggcom.pl/',
     githubUrl: 'https://github.com/Mino0z/baggcom.pl/',
     technologies: ['WordPress', 'Astra Theme', 'JavaScript', 'SCSS'],
@@ -96,7 +104,7 @@ const projects = ref([
     id: 2,
     title: 'Transportation Company Website',
     description: 'One page website for a transportation company, featuring Wordpress Elementor and Astra theme, Graphic design and branding.',
-    image: '/src/assets/budtaxi nobackground.png',
+    image: budtaxiImage,
     liveUrl: 'https://budtaxi.pl/',
     githubUrl: 'https://github.com/Mino0z/budtaxi.pl/',
     technologies: ['WordPress', 'Elementor', 'Photoshop', 'Figma'],
@@ -106,7 +114,7 @@ const projects = ref([
     id: 3,
     title: 'Low-Code Social Media Automation',
     description: 'set of automations for social media platforms to multiply your reach and engagement.',
-    image: '/src/assets/Facebook to instagram, pinterest.png',
+    image: facebookImage,
     liveUrl: '',
     githubUrl: 'https://github.com/Mino0z/SocialMediaAutomation/',
     technologies: ['Make.com', 'Zapier',],
@@ -116,7 +124,7 @@ const projects = ref([
     id: 4,
     title: 'Local Listing Automation Tool',
     description: 'A program that automates the process of posting advertisements on a local classifieds portal. Based on Puppeteer library. Connection with 2Captcha API for solving captchas.',
-    image: '/src/assets/puppeteer.png',
+    image: puppeteerImage,
     liveUrl: 'https://example.com/project4',
     githubUrl: 'https://github.com/yourusername/data-pipeline',
     technologies: ['Node.js', 'Puppeteer', 'RESTful API', 'Express'],
@@ -126,7 +134,7 @@ const projects = ref([
     id: 5,
     title: 'CRM / ERP for Constructions Business',
     description: 'Custom software for building depots, gravel pits, concrete plants, and similar businesses. Features include order management, inventory tracking, and customer relationship management.',
-    image: '/src/assets/comara.io.png',
+    image: comaraImage,
     liveUrl: 'https://example.com/project5',
     githubUrl: '',
     technologies: ['Vue.js', 'shadcn/vue', 'C#', 'T-SQL', 'user interviews'],
@@ -136,7 +144,7 @@ const projects = ref([
     id: 6,
     title: 'Ecommerce Woocommerce Store ',
     description: 'Middleware service that connects various APIs and systems, providing a unified interface for client applications.',
-    image: '/src/assets/eqex.png',
+    image: eqexImage,
     liveUrl: '',
     githubUrl: 'https://github.com/yourusername/api-integration',
     technologies: ['Wordpress', 'Woocommerce', 'Elementor', 'Redis'],
