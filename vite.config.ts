@@ -18,5 +18,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  base: '/PortfolioPage/', // Ważne dla GitHub Pages
+  base: '/', // Ważne dla GitHub Pages
 })
