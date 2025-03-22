@@ -82,6 +82,7 @@ const filters = [
   { label: 'WordPress', value: 'wordpress' },
   { label: 'Node.js', value: 'nodejs' },
   { label: '.NET', value: 'dotnet' },
+  {label: 'Vue.js', value: 'vuejs'},
   { label: 'Other', value: 'other' },
 
 ];
@@ -98,7 +99,7 @@ const projects = ref([
     liveUrl: 'https://baggcom.pl/',
     githubUrl: 'https://github.com/Mino0z/baggcom.pl/',
     technologies: ['WordPress', 'Astra Theme', 'JavaScript', 'SCSS'],
-    category: 'wordpress'
+    categories: 'wordpress'
   },
   {
     id: 2,
@@ -108,7 +109,7 @@ const projects = ref([
     liveUrl: 'https://budtaxi.pl/',
     githubUrl: 'https://github.com/Mino0z/budtaxi.pl/',
     technologies: ['WordPress', 'Elementor', 'Photoshop', 'Figma'],
-    category: 'wordpress'
+    categories: ['wordpress']
   },
   {
     id: 3,
@@ -118,7 +119,7 @@ const projects = ref([
     liveUrl: '',
     githubUrl: 'https://github.com/Mino0z/SocialMediaAutomation/',
     technologies: ['Make.com', 'Zapier',],
-    category: 'other'
+    categories: ['other']
   },
   {
     id: 4,
@@ -128,7 +129,7 @@ const projects = ref([
     liveUrl: 'https://example.com/project4',
     githubUrl: 'https://github.com/yourusername/data-pipeline',
     technologies: ['Node.js', 'Puppeteer', 'RESTful API', 'Express'],
-    category: 'nodejs'
+    categories: ['nodejs']
   },
   {
     id: 5,
@@ -138,7 +139,7 @@ const projects = ref([
     liveUrl: 'https://example.com/project5',
     githubUrl: '',
     technologies: ['Vue.js', 'shadcn/vue', 'C#', 'T-SQL', 'user interviews'],
-    category: 'wordpress'
+    categories: ['dotnet','vuejs']
   },
   {
     id: 6,
@@ -148,7 +149,7 @@ const projects = ref([
     liveUrl: '',
     githubUrl: 'https://github.com/yourusername/api-integration',
     technologies: ['Wordpress', 'Woocommerce', 'Elementor', 'Redis'],
-    category: 'nodejs'
+    catrgories: ['wordpress']
   }
 ]);
 
@@ -157,7 +158,7 @@ const filteredProjects = computed(() => {
   if (currentFilter.value === 'all') {
     return projects.value;
   }
-  return projects.value.filter(project => project.category === currentFilter.value);
+  return projects.value.filter(project => project.categories?.includes(currentFilter.value));
 });
 
 // Obsługa błędu ładowania obrazów

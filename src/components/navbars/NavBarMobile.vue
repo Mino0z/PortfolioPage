@@ -1,10 +1,5 @@
 <template>
-  <div id="navbar-all">
-    <h1>Jakub Minorczyk</h1>
-    <div class="content">
-      <Button>get in touch</Button>
-    </div>
-  </div>
+  
   
   <!-- Bottom Navigation Bar -->
   <nav id="bottom-nav">

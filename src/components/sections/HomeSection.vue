@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="scroll-indicator" @click="scrollToNextSection">
-      <span class="scroll-text">Scroll Down</span>
+      
       <div class="arrow-container">
         <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -380,13 +380,7 @@ const scrollToContactSection = () => {
   opacity: 0.8;
 }
 
-.scroll-text {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+
 
 .arrow-container {
   animation: bounce 2s infinite;
@@ -415,9 +409,7 @@ const scrollToContactSection = () => {
     bottom: 20px;
   }
   
-  .scroll-text {
-    font-size: 0.8rem;
-  }
+  
   
   .arrow {
     width: 24px;
