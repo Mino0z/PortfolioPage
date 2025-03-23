@@ -6,7 +6,7 @@
       <div class="contact-content">
         <div class="contact-info">
           <div class="profile">
-            <img src="/src/assets/photo.webp" alt="Jakub Minorczyk" class="contact-image" @error="handleImageError">
+            <img src="/photo.webp" alt="Jakub Minorczyk" class="contact-image" @error="handleImageError">
             <h3>Jakub Minorczyk</h3>
             <p class="tagline">Frontend Developer & Web Designer</p>
           </div>
