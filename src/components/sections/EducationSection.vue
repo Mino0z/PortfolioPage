@@ -120,8 +120,8 @@
   
   <script setup>
   // Importy obrazów
-  import wseiLogo from '../../assets/wsei.png';
-  import zstLogo from '../../assets/zst.jpeg';
+  import wseiLogo from '../../assets/wsei.webp';
+  import zstLogo from '../../assets/zst.webp';
   
   // Nie potrzebujemy specjalnych skryptów dla tej sekcji
   </script>

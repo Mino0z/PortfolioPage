@@ -33,7 +33,7 @@
             <div class="cta-container">
               <a class="primary-btn" @click="scrollToProjectsSection">View My Work</a>
               
-              <a href="/resume.pdf" target="_blank" class="secondary-btn">Download CV</a>
+              <a href="/Jakub Minorczyk CV.pdf" target="_blank" class="secondary-btn">Download CV</a>
           
             </div>
           </div>

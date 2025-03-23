@@ -159,49 +159,77 @@ h1 {
   justify-content: center;
 }
 
-/* Elementy listy - ZMODYFIKOWANE */
+/* Replace existing li styles */
 #bottom-nav ul li {
   padding: 0.5rem;
-  border-radius: 50px;
+  border-radius: 20px; /* Reduced from 50px */
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: none;
+  border: 1px solid transparent;
   display: flex;
   align-items: center;
   background-color: transparent;
   box-shadow: inset 0 0 0 0 transparent;
+  transition: 
+    background-color 0.3s ease, 
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
-/* Aktywny element - JEDNOLITA DEFINICJA bez transition */
-#bottom-nav ul li.active {
-  background-color: #B77DFF;
-  padding: 0.5rem 1rem;
-  box-shadow: inset 0 0 0 1px #D7BDFF;
-}
-
-/* Styl dla linków */
-a {
+/* Add styling for anchor elements to ensure horizontal layout with proper spacing */
+#bottom-nav ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   text-decoration: none;
   color: #D7BDFF;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  white-space: nowrap;
-  width: 100%;
+  transition: color 0.3s ease;
+  padding-left: 0.25rem; /* Add padding between left border and icon */
 }
 
-/* Ikony - BEZ TRANSITION */
+/* Hover effect */
+#bottom-nav ul li:not(.active):hover {
+  background-color: rgba(183, 125, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Clean up conflicting active styles by consolidating them */
+li.active {
+  animation: growElement 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards; 
+  background-color: transparent; 
+  box-shadow: inset 0 0 0 0 transparent;
+  padding: 0.5rem; 
+  border: 1px solid #D7BDFF;
+  border-radius: 20px; /* Explicitly set border radius for active state */
+}
+
+/* Update was-active styles for smoother transitions */
+li.was-active {
+  transition: 
+    background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.4s ease,
+    padding 0.4s ease,
+    border-color 0.4s ease;
+  background-color: transparent !important;
+  box-shadow: inset 0 0 0 0 transparent !important;
+  padding: 0.5rem !important;
+  border-color: transparent !important;
+  animation: none !important;
+}
+
+/* Updated icon animations with padding */
 .icon {
   width: 1.3rem;
   height: 1.3rem;
   min-width: 1.3rem;
+  margin-right: 0.25rem; /* Add space between icon and label */
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.5s ease;
 }
 
 li.active .icon {
   color: #ffffff;
   transform: scale(1.1);
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.5s ease;
 }
 
 /* Tooltips */
@@ -270,11 +298,12 @@ html {
   pointer-events: none;
   color: #D7BDFF;
   margin-left: 0;
+  transition: max-width 0.3s ease, opacity 0.3s ease, margin-left 0.3s ease;
 }
 
 /* Animacja wejścia dla aktywnej etykiety */
 li.active .label {
-  animation: showLabelSmooth 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards; /* Płynniejsza krzywa bez "odbicia" */
+  animation: showLabelSmooth 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards; /* Increased delay from 0.4s to 0.6s */
 }
 
 /* Animacja wyjścia dla poprzednio aktywnej etykiety */
@@ -387,6 +416,7 @@ li.was-active {
     background-color: #B77DFF;
     box-shadow: inset 0 0 0 1px #D7BDFF;
     width: auto;
+    transform: translateY(-1px);
   }
 }
 

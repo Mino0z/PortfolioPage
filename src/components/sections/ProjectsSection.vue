@@ -69,12 +69,12 @@
 import { ref, computed, onMounted } from 'vue';
 
 // Na początku pliku dodaj importy obrazów
-import baggcomImage from '@/assets/baggcom nobackground.png';
-import budtaxiImage from '@/assets/budtaxi nobackground.png';
-import facebookImage from '@/assets/Facebook to instagram, pinterest.png';
-import puppeteerImage from '@/assets/puppeteer.png';
-import comaraImage from '@/assets/comara.io.png';
-import eqexImage from '@/assets/eqex.png';
+import baggcomImage from '@/assets/baggcom nobackground.webp';
+import budtaxiImage from '@/assets/budtaxi nobackground.webp';
+import facebookImage from '@/assets/Facebook to instagram, pinterest.webp';
+import puppeteerImage from '@/assets/puppeteer.webp';
+import comaraImage from '@/assets/comara.io.webp';
+import eqexImage from '@/assets/eqex.webp';
 
 // Filtry projektów
 const filters = [
