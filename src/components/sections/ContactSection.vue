@@ -8,7 +8,7 @@
           <div class="profile">
             <img src="/photo.webp" alt="Jakub Minorczyk" class="contact-image" @error="handleImageError">
             <h3>Jakub Minorczyk</h3>
-            <p class="tagline">Frontend Developer & Web Designer</p>
+            <p class="tagline">C# & .NET developer </p>
           </div>
           
           <div class="contact-methods">

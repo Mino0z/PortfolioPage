@@ -5,7 +5,7 @@
           <h1 class="name">Jakub <span class="highlight">Minorczyk</span></h1>
           
           <div class="typewriter-container">
-            <span class="prefix">I'm a&nbsp;</span>
+            <span class="prefix">I&nbsp;</span>
             <span class="typewriter" ref="typewriterRef">
               {{ displayedText }}
               <span class="cursor" :class="{ 'blink': isBlinking }">|</span>
@@ -13,8 +13,9 @@
           </div>
           
           <p class="description">
-            Passionate about creating clean, interactive and user-friendly web experiences.
-            Let's build something amazing together.
+            Ambitious Junior Developer with experience in .NET technologies and SQL Server.
+            Specializing in C#, ASP.NET, WPF and Windows Forms applications.
+            Communication, reliability, and timeliness are my core professional values.
           </p>
           
           <div class="buttons">
@@ -44,13 +45,13 @@
   <script setup lang="ts">
   import { ref, onMounted, onUnmounted } from 'vue';
 
-  // Tekst dla efektu typewriter - możesz dostosować listę
+  // Tekst dla efektu typewriter - zaktualizowana lista
   const phrases = [
-    ".NET Developer",
-    "Vue.js Developer",
-    "Web Designer",
-    "Marketing Automation Dev",
-    "Start up owner",
+    "'m .NET Developer",
+    "'m SQL / T-SQL specialist",
+    " create scalable backend systems",
+    " write clean C# code",
+    " build APIs with ASP.NET Core"
   ];
   
   const typewriterRef = ref<HTMLElement | null>(null);

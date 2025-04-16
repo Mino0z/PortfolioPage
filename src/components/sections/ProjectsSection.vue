@@ -75,14 +75,15 @@ import facebookImage from '@/assets/Facebook to instagram, pinterest.webp';
 import puppeteerImage from '@/assets/puppeteer.webp';
 import comaraImage from '@/assets/comara.io.webp';
 import eqexImage from '@/assets/eqex.webp';
-
+import wseiLogo from '@/assets/wsei.webp';
+import cpuSimulatorImage from '@/assets/Cpu Simulator.webp';
 // Filtry projektów
 const filters = [
   { label: 'All Projects', value: 'all' },
-  { label: 'WordPress', value: 'wordpress' },
-  { label: 'Node.js', value: 'nodejs' },
   { label: '.NET', value: 'dotnet' },
   {label: 'Vue.js', value: 'vuejs'},
+  { label: 'WordPress', value: 'wordpress' },
+  { label: 'Node.js', value: 'nodejs' },
   { label: 'Other', value: 'other' },
 
 ];
@@ -136,9 +137,9 @@ const projects = ref([
     title: 'CRM / ERP for Constructions Business',
     description: 'Custom software for building depots, gravel pits, concrete plants, and similar businesses. Features include order management, inventory tracking, and customer relationship management.',
     image: comaraImage,
-    liveUrl: 'https://example.com/project5',
+    liveUrl: 'http://www.comara.io',
     githubUrl: '',
-    technologies: ['Vue.js', 'shadcn/vue', 'C#', 'T-SQL', 'user interviews'],
+    technologies: ['Vue.js', 'shadcn/vue', 'C#', 'ASP .NET Core' , 'T-SQL', 'user interviews'],
     categories: ['dotnet','vuejs']
   },
   {
@@ -146,10 +147,30 @@ const projects = ref([
     title: 'Ecommerce Woocommerce Store ',
     description: 'Middleware service that connects various APIs and systems, providing a unified interface for client applications.',
     image: eqexImage,
+    liveUrl: 'https://eqex.de',
+    githubUrl: '',
+    technologies: ['Wordpress', 'Woocommerce', 'Elementor', 'Figma'],
+    categories: ['wordpress']
+  },
+  {
+    id: 7,
+    title: 'CPU register simulator',
+    description: 'A simple CPU register simulator, built with C# and Vue.js. It allows users to visualize and understand how CPU registers work.',
+    image: cpuSimulatorImage,
     liveUrl: '',
-    githubUrl: 'https://github.com/yourusername/api-integration',
-    technologies: ['Wordpress', 'Woocommerce', 'Elementor', 'Redis'],
-    catrgories: ['wordpress']
+    githubUrl: 'https://github.com/Mino0z/studies/tree/main/Documents/Jakub_Minorczyk',
+    technologies: ['C#', 'ASP .NET Core', 'Vue.js', 'REST API', 'MVC'],
+    categories: ['dotnet','vuejs']
+  },
+  {
+    id: 7,
+    title: 'Studies Projects',
+    description: 'Repository containing over 40 various projects from my studies, including a CPU register simulator and a Console applications.',
+    image: wseiLogo,
+    liveUrl: '',
+    githubUrl: 'https://github.com/Mino0z/studies/tree/main/Documents/CsharpProjects',
+    technologies: ['C#', 'ASP .NET Core'],
+    categories: ['dotnet']
   }
 ]);
 
