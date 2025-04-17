@@ -145,7 +145,7 @@ const projects = ref([
   {
     id: 6,
     title: 'Ecommerce Woocommerce Store ',
-    description: 'Middleware service that connects various APIs and systems, providing a unified interface for client applications.',
+    description: 'Ecommerce store for a company selling high-quality products. Built with WordPress and WooCommerce, featuring custom design and user-friendly interface.',
     image: eqexImage,
     liveUrl: 'https://eqex.de',
     githubUrl: '',
